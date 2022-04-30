@@ -1,0 +1,1122 @@
+[gd_scene load_steps=57 format=2]
+
+[ext_resource path="res://objects/wall_terminal/wall_terminal_2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://world/entry.gd" type="Script" id=2]
+[ext_resource path="res://assets/sketchfab/coffee_table_blue/coffee_table.tscn" type="PackedScene" id=3]
+[ext_resource path="res://world/world.gd" type="Script" id=4]
+[ext_resource path="res://assets/sketchfab/armchair/armchair.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/sketchfab/potted_plant_mediterranean_med_leaf_low_poly/potted_plant.tscn" type="PackedScene" id=6]
+[ext_resource path="res://vm/SSHClient.cs" type="Script" id=7]
+[ext_resource path="res://objects/computer_desk/computer_desk.tscn" type="PackedScene" id=8]
+[ext_resource path="res://vm/MQTTClient.cs" type="Script" id=9]
+[ext_resource path="res://assets/sketchfab/hi-tech_doors_-_red/big_door.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/fonts/FreeSans.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://assets/freesound/Door_Hinge03_flac_403353/Door_Hinge03_flac_403353_192K-OGG.ogg" type="AudioStream" id=12]
+[ext_resource path="res://assets/freesound/Computer_Glitching_Digital_Data_Corruption_02-04_LOOP_wav_573189/Computer_Glitching_Digital_Data_Corruption_02-04_LOOP_wav_573189_0K-WAV.wav" type="AudioStream" id=13]
+[ext_resource path="res://assets/flickr/together_we_can_do_it/poster.jpg" type="Texture" id=14]
+[ext_resource path="res://addons/SIsilicon.3d.text/label_3d.gd" type="Script" id=15]
+[ext_resource path="res://objects/arcade_machine/arcade_machine.tscn" type="PackedScene" id=16]
+[ext_resource path="res://addons/verlet_rope_cs/VerletRopeCs.cs" type="Script" id=17]
+[ext_resource path="res://addons/verlet_rope_cs/DefaultRope.material" type="Material" id=18]
+[ext_resource path="res://assets/fonts/routed_gothic_v1.0.0/routed-gothic.ttf" type="DynamicFontData" id=19]
+[ext_resource path="res://assets/robot_voice_generator/epochalypse_override.wav" type="AudioStream" id=20]
+[ext_resource path="res://assets/sketchfab/retro_cyberpunk_computer_screens/scene.gltf" type="PackedScene" id=21]
+[ext_resource path="res://world/glitch.gdshader" type="Shader" id=22]
+[ext_resource path="res://world/calendar.png" type="Texture" id=23]
+[ext_resource path="res://objects/locked_door/locked_door.tscn" type="PackedScene" id=24]
+[ext_resource path="res://assets/sketchfab/server_v2_console/scene.gltf" type="PackedScene" id=25]
+[ext_resource path="res://world/root_pass.png" type="Texture" id=26]
+[ext_resource path="res://world/guest_pass.png" type="Texture" id=27]
+[ext_resource path="res://objects/door/door.tscn" type="PackedScene" id=28]
+[ext_resource path="res://world/clock.gd" type="Script" id=30]
+[ext_resource path="res://world/epochalypse_room.gd" type="Script" id=31]
+[ext_resource path="res://assets/fonts/DSEG7_classic/DSEG7_classic_bold.ttf" type="DynamicFontData" id=32]
+
+[sub_resource type="Animation" id=3]
+resource_name = "OpenDoor"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Entry/Hinge/AudioStreamPlayer3D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Entry/Hinge:rotation_degrees:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Entry/Hinge:rotation_degrees:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.4, 133.791, 0.4, -133.791, -133.887, -1.1, 5.07254, 1.1, -5.07254 ),
+"times": PoolRealArray( 0, 3 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Entry/Hinge:rotation_degrees:z")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3 )
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Entry/Hinge/AudioStreamPlayer3D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Entry/Hinge:rotation_degrees:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Entry/Hinge:rotation_degrees:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Entry/Hinge:rotation_degrees:z")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.458824, 0.509804, 0.545098, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 1, 0.631373, 0, 1 )
+
+[sub_resource type="CylinderMesh" id=13]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 1.583
+radial_segments = 8
+
+[sub_resource type="SpatialMaterial" id=12]
+albedo_color = Color( 0.282353, 0.282353, 0.282353, 1 )
+
+[sub_resource type="SpatialMaterial" id=16]
+albedo_color = Color( 0.0117647, 0.658824, 0.615686, 1 )
+
+[sub_resource type="SpatialMaterial" id=19]
+albedo_color = Color( 0.784314, 0.537255, 0.25098, 1 )
+
+[sub_resource type="SpatialMaterial" id=20]
+albedo_color = Color( 0.913725, 0.701961, 0.25098, 1 )
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 11 )
+
+[sub_resource type="CylinderMesh" id=11]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.65
+radial_segments = 8
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.576471, 0.764706, 0.929412, 1 )
+
+[sub_resource type="BoxShape" id=26]
+extents = Vector3( 1, 5.15715, 1 )
+
+[sub_resource type="SpatialMaterial" id=10]
+flags_transparent = true
+albedo_color = Color( 0, 0.529412, 0.956863, 0.490196 )
+metallic = 0.27
+roughness = 0.0
+
+[sub_resource type="SpatialMaterial" id=14]
+flags_unshaded = true
+params_cull_mode = 2
+albedo_color = Color( 1, 0.133333, 0, 1 )
+
+[sub_resource type="BoxShape" id=25]
+extents = Vector3( 1.81041, 1.8357, 2.57847 )
+
+[sub_resource type="SpatialMaterial" id=15]
+albedo_color = Color( 0.403922, 0.403922, 0.403922, 1 )
+metallic = 0.72
+
+[sub_resource type="SpatialMaterial" id=18]
+albedo_color = Color( 0.105882, 0.105882, 0.105882, 1 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 32
+font_data = ExtResource( 32 )
+
+[sub_resource type="SpatialMaterial" id=21]
+albedo_color = Color( 1, 0.866667, 0, 1 )
+
+[sub_resource type="DynamicFont" id=22]
+font_data = ExtResource( 19 )
+
+[sub_resource type="Animation" id=23]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("CSGCombiner3:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 3.09483, 0.135387, 1.3381 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CSGCombiner3:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 90, 0 ) ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "RotateIntel"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("CSGCombiner3:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 90, 0 ), Vector3( 0, 180, 0 ), Vector3( 0, 270, 0 ), Vector3( 0, 360, 0 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 22 )
+shader_param/shake_power = 0.03
+shader_param/shake_rate = 0.2
+shader_param/shake_speed = 5.0
+shader_param/shake_block_size = 30.5
+shader_param/shake_color_rate = 0.01
+
+[sub_resource type="DynamicFont" id=7]
+size = 52
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 11 )
+
+[node name="World" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="Auth" type="Node" parent="." groups=["mqtt"]]
+script = ExtResource( 9 )
+Autostart = false
+Topic = "auth/+"
+
+[node name="Audit" type="Node" parent="." groups=["mqtt"]]
+script = ExtResource( 9 )
+Autostart = false
+Topic = "audit/+"
+
+[node name="Clock" type="Node" parent="."]
+script = ExtResource( 30 )
+
+[node name="Tick" type="Timer" parent="Clock"]
+process_mode = 0
+autostart = true
+
+[node name="SSHClient" type="Node" parent="Clock"]
+script = ExtResource( 7 )
+
+[node name="SSHClient" type="Node" parent="."]
+script = ExtResource( 7 )
+
+[node name="MQTTClient" type="Node" parent="." groups=["mqtt"]]
+script = ExtResource( 9 )
+Autostart = false
+Topic = "audit/+"
+
+[node name="Player" parent="." instance_placeholder="res://addons/thief_controller/prefabs/Player.tscn"]
+transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 1.25283, -1.75801, 0.0236294 )
+
+[node name="Rooms" type="Spatial" parent="."]
+
+[node name="Entry" type="Spatial" parent="Rooms"]
+script = ExtResource( 2 )
+
+[node name="MQTTClient" type="Node" parent="Rooms/Entry" groups=["mqtt"]]
+script = ExtResource( 9 )
+Autostart = false
+Topic = "auth/+"
+
+[node name="SSHClient" type="Node" parent="Rooms/Entry"]
+script = ExtResource( 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Rooms/Entry"]
+root_node = NodePath("../..")
+anims/OpenDoor = SubResource( 3 )
+anims/RESET = SubResource( 4 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="Rooms/Entry"]
+use_collision = true
+
+[node name="CSGCylinder" type="CSGCylinder" parent="Rooms/Entry/CSGCombiner"]
+transform = Transform( -4.37114e-08, 1, 0, 1, 4.37114e-08, 8.74228e-08, 8.74228e-08, 3.82137e-15, -1, -2.40604, 0, 0 )
+radius = 3.0
+height = 31.0028
+sides = 13
+
+[node name="CSGCylinder2" type="CSGCylinder" parent="Rooms/Entry/CSGCombiner"]
+transform = Transform( -4.37114e-08, 1, 0, 1, 4.37114e-08, 8.74228e-08, 8.74228e-08, 3.82137e-15, -1, 5.95116, 2.60133e-07, 2.27416e-14 )
+operation = 2
+radius = 2.0
+height = 14.2938
+sides = 13
+
+[node name="CSGBox" type="CSGBox" parent="Rooms/Entry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.46697, 0 )
+use_collision = true
+width = 26.2961
+height = 1.34327
+depth = 7.27124
+material = SubResource( 1 )
+
+[node name="OmniLight" type="OmniLight" parent="Rooms/Entry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.894639, 0, 0 )
+light_energy = 16.0
+light_indirect_energy = 1.734
+light_negative = true
+light_specular = 16.0
+omni_range = 2.82118
+
+[node name="Hinge" type="Spatial" parent="Rooms/Entry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1535, -0.323418, 0.634 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Rooms/Entry/Hinge"]
+stream = ExtResource( 12 )
+
+[node name="Door" type="CSGBox" parent="Rooms/Entry/Hinge"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.634 )
+operation = 2
+width = 0.130244
+height = 2.97739
+depth = 1.26895
+material = SubResource( 2 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="Rooms/Entry/Hinge/Door"]
+transform = Transform( -1, 6.34159e-12, -7.44557e-10, -6.33804e-12, 0.999855, 0.0170335, 7.44556e-10, 0.0170335, -0.999855, 0.262371, 0.929827, 0.0330142 )
+mesh = SubResource( 13 )
+skeleton = NodePath("../../../../RecRoom")
+material/0 = SubResource( 12 )
+
+[node name="VerletRopeCs2" type="ImmediateGeometry" parent="Rooms/Entry/Hinge/Door/MeshInstance3"]
+transform = Transform( -1, -6.34174e-12, 7.44557e-10, 6.34527e-12, 0.999855, 0.0170335, -7.44556e-10, 0.0170335, -0.999855, 9.53674e-06, 0.7351, 0.00766447 )
+material_override = ExtResource( 18 )
+script = ExtResource( 17 )
+AttachEndTo = NodePath("../../../../../RecRoom/MeshInstance2/Position3D")
+SimulationParticles = 45
+RopeLength = 2.5
+RopeWidth = 0.01
+
+[node name="Position3D" type="Position3D" parent="Rooms/Entry/Hinge/Door/MeshInstance3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.294085, 0 )
+
+[node name="WallTerminal" parent="Rooms/Entry/Hinge/Door" instance=ExtResource( 1 )]
+transform = Transform( -8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -4.76837e-07, 0, 0 )
+
+[node name="CSGCombiner2" type="CSGCombiner" parent="Rooms/Entry"]
+use_collision = true
+
+[node name="CSGBox2" type="CSGBox" parent="Rooms/Entry/CSGCombiner2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9151, 0, 0 )
+width = 0.483841
+height = 6.1189
+depth = 28.9823
+
+[node name="CSGBox3" type="CSGBox" parent="Rooms/Entry/CSGCombiner2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9151, -0.323418, 0 )
+operation = 2
+width = 1.83569
+height = 2.97739
+depth = 1.26895
+
+[node name="CSGBox10" type="CSGBox" parent="Rooms/Entry/CSGCombiner2"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 13.2216, 0, -10.6037 )
+operation = 2
+width = 3.20172
+height = 3.5846
+depth = 1.71604
+
+[node name="Sprite3D" type="Sprite3D" parent="Rooms/Entry"]
+transform = Transform( 0.017414, -0.00983632, -4.29959e-10, 0, -8.74228e-10, 0.02, -0.00983632, -0.017414, -7.6119e-10, 1.22312, -1.7794, -0.62206 )
+texture = ExtResource( 27 )
+
+[node name="Lobby" type="Spatial" parent="Rooms"]
+
+[node name="PottedPlant" parent="Rooms/Lobby" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7477, -1.79537, -19.6862 )
+
+[node name="Armchair" parent="Rooms/Lobby" instance=ExtResource( 5 )]
+transform = Transform( 0.985633, 0, -0.168902, 0, 1, 0, 0.168902, 0, 0.985633, 20.096, -1.80244, -2.0639 )
+
+[node name="Armchair2" parent="Rooms/Lobby" instance=ExtResource( 5 )]
+transform = Transform( -0.969868, 0, -0.243632, 0, 1, 0, 0.243632, 0, -0.969868, 20.096, -1.80244, 2.00524 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="Rooms/Lobby"]
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="Rooms/Lobby/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.296, -2.467, -6.93143 )
+use_collision = true
+width = 26.2961
+height = 1.34327
+depth = 46.5562
+material = SubResource( 16 )
+
+[node name="CSGBox2" type="CSGBox" parent="Rooms/Lobby/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.4233, 0, 0 )
+width = 0.483841
+height = 6.1189
+depth = 11.4122
+
+[node name="CSGBox3" type="CSGBox" parent="Rooms/Lobby/CSGCombiner"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.9336, 0, 3.06694 )
+width = 0.483841
+height = 6.1189
+depth = 13.0497
+
+[node name="CSGCombiner2" type="CSGCombiner" parent="Rooms/Lobby"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9011, 0.134999, -5.71474 )
+
+[node name="CSGBox" type="CSGBox" parent="Rooms/Lobby/CSGCombiner2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0722966 )
+width = 1.64332
+height = 0.821249
+depth = 0.225778
+material = SubResource( 19 )
+
+[node name="CSGBox2" type="CSGBox" parent="Rooms/Lobby/CSGCombiner2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.134192 )
+operation = 2
+width = 1.60222
+height = 0.717687
+depth = 0.225778
+material = SubResource( 20 )
+
+[node name="RecRoom" type="Spatial" parent="Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7699, 0, -2.20844 )
+
+[node name="Armchair" parent="Rooms/RecRoom" instance=ExtResource( 5 )]
+transform = Transform( 0.956437, 0, 0.291938, 0, 1, 0, -0.291938, 0, 0.956437, -2.0222, -1.80244, -1.90657 )
+
+[node name="CoffeeTable" parent="Rooms/RecRoom" instance=ExtResource( 3 )]
+transform = Transform( 0.748516, 0, -0.663117, 0, 1, 0, 0.663117, 0, 0.748516, -2.4671, -1.7931, -0.623398 )
+
+[node name="ArcadeMachine" parent="Rooms/RecRoom" instance=ExtResource( 16 )]
+transform = Transform( -0.7, 0, -6.11959e-08, 0, 0.7, 0, 6.11959e-08, 0, -0.7, -0.270615, -0.336722, 3.73901 )
+
+[node name="Label3D" type="Spatial" parent="Rooms/RecRoom"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.21785, -0.381169, -3.54053 )
+script = ExtResource( 15 )
+text = "Recreation
+Room"
+text_size = 0.5
+font = SubResource( 9 )
+align = 0
+billboard = false
+color = Color( 0, 0, 0, 1 )
+metallic = 0.0
+roughness = 0.5
+emission_color = Color( 1, 1, 1, 1 )
+emission_strength = 0.0
+extrude = 0.0
+min_steps = 32
+max_steps = 256
+
+[node name="VerletRopeCs" type="ImmediateGeometry" parent="Rooms/RecRoom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.606163, 0.104941, 4.32491 )
+material_override = ExtResource( 18 )
+script = ExtResource( 17 )
+AttachEndTo = NodePath("../Cable/Position3D")
+RopeWidth = 0.01
+
+[node name="Cable" type="MeshInstance" parent="Rooms/RecRoom"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -3.36645, 2.72391, 0.453739 )
+mesh = SubResource( 11 )
+material/0 = SubResource( 12 )
+
+[node name="VerletRopeCs2" type="ImmediateGeometry" parent="Rooms/RecRoom/Cable"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0.292543, 0 )
+material_override = ExtResource( 18 )
+script = ExtResource( 17 )
+AttachEndTo = NodePath("../../MeshInstance2/Position3D")
+RopeLength = 11.0
+RopeWidth = 0.01
+
+[node name="Position3D" type="Position3D" parent="Rooms/RecRoom/Cable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.294085, 0 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Rooms/RecRoom"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -11.8742, 2.72391, -7.93623 )
+mesh = SubResource( 11 )
+material/0 = SubResource( 12 )
+
+[node name="VerletRopeCs2" type="ImmediateGeometry" parent="Rooms/RecRoom/MeshInstance2"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 2.38419e-06, 0.292543, 0 )
+material_override = ExtResource( 18 )
+script = ExtResource( 17 )
+AttachEndTo = NodePath("../../../ServerRoom/MeshInstance3/Position3D")
+RopeLength = 10.5
+RopeWidth = 0.01
+
+[node name="Position3D" type="Position3D" parent="Rooms/RecRoom/MeshInstance2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.294085, 0 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="Rooms/RecRoom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7699, 0, 11.2072 )
+use_collision = true
+
+[node name="CSGBox7" type="CSGBox" parent="Rooms/RecRoom/CSGCombiner"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25.9486, 0, -6.15861 )
+width = 0.483841
+height = 6.1189
+depth = 9.1808
+material = SubResource( 8 )
+
+[node name="CSGBox6" type="CSGBox" parent="Rooms/RecRoom/CSGCombiner"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 34.3252, 0, -14.4661 )
+width = 0.483841
+height = 6.1189
+depth = 26.2664
+
+[node name="CSGBox8" type="CSGBox" parent="Rooms/RecRoom/CSGCombiner"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25.759, 0, -14.4661 )
+operation = 2
+width = 3.20172
+height = 3.5846
+depth = 1.71604
+
+[node name="ServerRoom" type="Spatial" parent="Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.49985, 0, -15.6747 )
+
+[node name="Monitors" parent="Rooms/ServerRoom" instance=ExtResource( 21 )]
+transform = Transform( 6.55671e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, 6.55671e-08, -2.23562, 0.455012, 6.52854 )
+
+[node name="PottedPlant" parent="Rooms/ServerRoom" instance=ExtResource( 6 )]
+transform = Transform( -0.914593, 0, 0.404375, 0, 1, 0, -0.404375, 0, -0.914593, 6.47705, -1.79537, 11.1315 )
+
+[node name="Poster" type="Sprite3D" parent="Rooms/ServerRoom"]
+transform = Transform( -0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, 3.09791, 0, 11.8656 )
+texture = ExtResource( 14 )
+
+[node name="Door" parent="Rooms/ServerRoom" instance=ExtResource( 28 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 7.18627, 0, 5.07735 )
+
+[node name="Door2" parent="Rooms/ServerRoom" instance=ExtResource( 28 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.9373, 0, 11.072 )
+
+[node name="Label3D" type="Spatial" parent="Rooms/ServerRoom"]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 7.69804, -0.381169, 3.81023 )
+script = ExtResource( 15 )
+text = "Mainframe
+Operations"
+text_size = 0.5
+font = SubResource( 9 )
+align = 0
+billboard = false
+color = Color( 0, 0, 0, 1 )
+metallic = 0.0
+roughness = 0.5
+emission_color = Color( 1, 1, 1, 1 )
+emission_strength = 0.0
+extrude = 0.0
+min_steps = 32
+max_steps = 256
+
+[node name="Label3D2" type="Spatial" parent="Rooms/ServerRoom"]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -3.58086, -0.381169, 9.86228 )
+script = ExtResource( 15 )
+text = "Server Room"
+text_size = 0.5
+font = SubResource( 9 )
+align = 0
+billboard = false
+color = Color( 0, 0, 0, 1 )
+metallic = 0.0
+roughness = 0.5
+emission_color = Color( 1, 1, 1, 1 )
+emission_strength = 0.0
+extrude = 0.0
+min_steps = 32
+max_steps = 256
+
+[node name="MeshInstance3" type="MeshInstance" parent="Rooms/ServerRoom"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -3.85931, 2.72391, 5.53001 )
+mesh = SubResource( 11 )
+skeleton = NodePath("../../RecRoom")
+material/0 = SubResource( 12 )
+
+[node name="VerletRopeCs2" type="ImmediateGeometry" parent="Rooms/ServerRoom/MeshInstance3"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 3.33786e-06, 0.292542, 0 )
+material_override = ExtResource( 18 )
+script = ExtResource( 17 )
+AttachEndTo = NodePath("../../Server/Position3D")
+RopeLength = 2.5
+RopeWidth = 0.01
+
+[node name="Position3D" type="Position3D" parent="Rooms/ServerRoom/MeshInstance3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.294085, 0 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="Rooms/ServerRoom"]
+transform = Transform( -5.73206e-15, -1.31134e-07, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, 1.31134e-07, 3.75231, 2.72391, 1.19094 )
+mesh = SubResource( 11 )
+skeleton = NodePath("../../RecRoom")
+material/0 = SubResource( 12 )
+
+[node name="VerletRopeCs2" type="ImmediateGeometry" parent="Rooms/ServerRoom/MeshInstance4"]
+transform = Transform( -5.73205e-15, 1, -4.37114e-08, -1.31134e-07, -4.37114e-08, -1, -1, -9.31736e-21, 1.31134e-07, 6.4373e-06, 0.292428, 0 )
+material_override = ExtResource( 18 )
+script = ExtResource( 17 )
+AttachEndTo = NodePath("../../../EpochalypseRoom/MeshInstance5/Position3D")
+RopeLength = 3.0
+RopeWidth = 0.01
+
+[node name="Position3D" type="Position3D" parent="Rooms/ServerRoom/MeshInstance4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.294085, 0 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="Rooms/ServerRoom"]
+transform = Transform( 2.78486e-09, -0.0871556, 0.996195, 1, 7.54979e-08, 3.80969e-09, -7.55426e-08, 0.996195, 0.0871556, 3.75231, 2.72391, 1.19094 )
+mesh = SubResource( 11 )
+skeleton = NodePath("../../RecRoom")
+material/0 = SubResource( 12 )
+
+[node name="VerletRopeCs2" type="ImmediateGeometry" parent="Rooms/ServerRoom/MeshInstance5"]
+transform = Transform( 2.78487e-09, 1, -7.55426e-08, -0.0871556, 7.54978e-08, 0.996194, 0.996194, 3.8097e-09, 0.0871556, -0.0777166, 0.292427, 2.52724e-05 )
+material_override = ExtResource( 18 )
+script = ExtResource( 17 )
+AttachEndTo = NodePath("../../MeshInstance3/Position3D")
+RopeLength = 8.0
+RopeWidth = 0.01
+
+[node name="Position3D" type="Position3D" parent="Rooms/ServerRoom/MeshInstance5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.294085, 0 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="Rooms/ServerRoom"]
+use_collision = true
+
+[node name="CSGBox4" type="CSGBox" parent="Rooms/ServerRoom/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7043, 0, -10.6149 )
+width = 0.483841
+height = 6.1189
+depth = 45.857
+
+[node name="CSGBox6" type="CSGBox" parent="Rooms/ServerRoom/CSGCombiner"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.29426, 0, 1.16695 )
+width = 0.483841
+height = 6.1189
+depth = 23.9176
+
+[node name="CSGBox7" type="CSGBox" parent="Rooms/ServerRoom/CSGCombiner"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.29426, 0, 12.1531 )
+width = 0.483841
+height = 6.1189
+depth = 23.9176
+
+[node name="CSGBox8" type="CSGBox" parent="Rooms/ServerRoom/CSGCombiner"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.82899, 0, 1.63809 )
+width = 0.483841
+height = 6.1189
+depth = 20.9167
+
+[node name="CSGBox9" type="CSGBox" parent="Rooms/ServerRoom/CSGCombiner"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -7.92343, 0, 6.64745 )
+width = 0.483841
+height = 6.1189
+depth = 10.9471
+
+[node name="CSGBox10" type="CSGBox" parent="Rooms/ServerRoom/CSGCombiner"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -4.19636, 0, 11.0648 )
+operation = 2
+width = 3.20172
+height = 3.5846
+depth = 1.63943
+
+[node name="ComputerDesk2" parent="Rooms/ServerRoom" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.73524, -1.28134, 5.3844 )
+
+[node name="OldTerminal" parent="Rooms/ServerRoom/ComputerDesk2" index="6"]
+transform = Transform( -1.09278e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.09278e-08, 0, 0.616196, -0.153713 )
+
+[node name="Server" parent="Rooms/ServerRoom" instance=ExtResource( 25 )]
+transform = Transform( -2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, -5.85511, -1.7839, 4.84077 )
+
+[node name="Object_2" parent="Rooms/ServerRoom/Server/Sketchfab_model/ServerV2+consoleobjcleanermaterialmergergles" index="0"]
+visible = false
+
+[node name="StaticBody" type="StaticBody" parent="Rooms/ServerRoom/Server"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Rooms/ServerRoom/Server/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.126404, 0, 0 )
+shape = SubResource( 26 )
+
+[node name="Position3D" type="Position3D" parent="Rooms/ServerRoom/Server"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.37469, 0 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Rooms/ServerRoom"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 2.13342, 0, 1.42707 )
+texture = ExtResource( 23 )
+
+[node name="Sprite3D2" type="Sprite3D" parent="Rooms/ServerRoom"]
+transform = Transform( -9.86856e-05, 0.00103384, -0.00994593, 0.00468661, 0.0087911, 0.000867301, 0.00883323, -0.00465271, -0.000571277, -6.28167, -0.020793, 5.30708 )
+texture = ExtResource( 26 )
+
+[node name="ComputerLab" type="Spatial" parent="Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.4983, 0, -15.4677 )
+
+[node name="Label3D" type="Spatial" parent="Rooms/ComputerLab"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6.30836, -0.381169, 0.328312 )
+script = ExtResource( 15 )
+text = "Lab 001"
+text_size = 0.5
+font = SubResource( 9 )
+align = 0
+billboard = false
+color = Color( 0, 0, 0, 1 )
+metallic = 0.0
+roughness = 0.5
+emission_color = Color( 1, 1, 1, 1 )
+emission_strength = 0.0
+extrude = 0.0
+min_steps = 32
+max_steps = 256
+
+[node name="LockedDoor" parent="Rooms/ComputerLab" instance=ExtResource( 24 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -6.05374, -0.295365, -0.843245 )
+
+[node name="LockedDoor2" parent="Rooms/ComputerLab" instance=ExtResource( 24 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.23158, -0.295365, -0.843245 )
+
+[node name="ComputerDesk" parent="Rooms/ComputerLab" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.23758, -1.29536, 9.07234 )
+
+[node name="ComputerDesk2" parent="Rooms/ComputerLab" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.21094, -1.29536, 9.15044 )
+
+[node name="ComputerDesk3" parent="Rooms/ComputerLab" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21094, -1.29536, 2.31989 )
+
+[node name="ComputerDesk4" parent="Rooms/ComputerLab" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.46519, -1.29536, 2.31989 )
+
+[node name="ComputerDesk5" parent="Rooms/ComputerLab" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.46519, -1.29536, -4.11187 )
+
+[node name="ComputerDesk6" parent="Rooms/ComputerLab" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13792, -1.29536, -4.13316 )
+
+[node name="CSGBox2" type="CSGBox" parent="Rooms/ComputerLab"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.13105, 0.358944, 5.80708 )
+use_collision = true
+width = 0.0688561
+depth = 4.92183
+material = SubResource( 10 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="Rooms/ComputerLab"]
+use_collision = true
+
+[node name="CSGBox6" type="CSGBox" parent="Rooms/ComputerLab/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22724, 0, 6.62581 )
+width = 0.483841
+height = 6.1189
+depth = 28.9823
+
+[node name="CSGBox5" type="CSGBox" parent="Rooms/ComputerLab/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.04362, 0, 13.2866 )
+width = 0.483841
+height = 6.1189
+depth = 42.1199
+
+[node name="CSGBox" type="CSGBox" parent="Rooms/ComputerLab/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.70275, 0.358944, 5.80708 )
+operation = 2
+depth = 4.92183
+
+[node name="MeshInstance3" type="MeshInstance" parent="Rooms/ComputerLab"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -6.02792, 2.72391, -1.10881 )
+mesh = SubResource( 11 )
+skeleton = NodePath("../../RecRoom")
+material/0 = SubResource( 12 )
+
+[node name="VerletRopeCs2" type="ImmediateGeometry" parent="Rooms/ComputerLab/MeshInstance3"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 7.53403e-05, 0.292543, 0 )
+material_override = SubResource( 14 )
+script = ExtResource( 17 )
+AttachEndTo = NodePath("../../../RecRoom/MeshInstance2/Position3D")
+RopeLength = 15.0
+RopeWidth = 0.01
+
+[node name="Position3D" type="Position3D" parent="Rooms/ComputerLab/MeshInstance3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.294085, 0 )
+
+[node name="ComputerLab2" type="Spatial" parent="Rooms"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.238, 0, -26.4346 )
+
+[node name="Label3D" type="Spatial" parent="Rooms/ComputerLab2"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6.30836, -0.381169, 0.328312 )
+script = ExtResource( 15 )
+text = "Lab 002"
+text_size = 0.5
+font = SubResource( 9 )
+align = 0
+billboard = false
+color = Color( 0, 0, 0, 1 )
+metallic = 0.0
+roughness = 0.5
+emission_color = Color( 1, 1, 1, 1 )
+emission_strength = 0.0
+extrude = 0.0
+min_steps = 32
+max_steps = 256
+
+[node name="LockedDoor" parent="Rooms/ComputerLab2" instance=ExtResource( 24 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -6.05374, -0.295365, -0.843245 )
+
+[node name="LockedDoor2" parent="Rooms/ComputerLab2" instance=ExtResource( 24 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.20275, -0.497492, 5.56256 )
+
+[node name="ComputerDesk" parent="Rooms/ComputerLab2" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -2.23759, -1.29536, 8.2968 )
+
+[node name="ComputerDesk2" parent="Rooms/ComputerLab2" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 1.21093, -1.29536, 8.2968 )
+
+[node name="ComputerDesk3" parent="Rooms/ComputerLab2" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.21094, -1.29536, 2.31989 )
+
+[node name="ComputerDesk4" parent="Rooms/ComputerLab2" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.46519, -1.29536, 2.31989 )
+
+[node name="ComputerDesk5" parent="Rooms/ComputerLab2" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.46519, -1.29536, -1.88643 )
+
+[node name="ComputerDesk6" parent="Rooms/ComputerLab2" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13792, -1.29536, -1.88643 )
+
+[node name="CSGBox2" type="CSGBox" parent="Rooms/ComputerLab2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.13105, 0.358944, 5.80708 )
+use_collision = true
+width = 0.0688561
+depth = 4.92183
+material = SubResource( 10 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="Rooms/ComputerLab2"]
+use_collision = true
+
+[node name="CSGBox8" type="CSGBox" parent="Rooms/ComputerLab2/CSGCombiner"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.12288, 0, -2.39668 )
+width = 0.483841
+height = 6.1189
+depth = 16.4536
+
+[node name="CSGBox6" type="CSGBox" parent="Rooms/ComputerLab2/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22724, 0, 6.62581 )
+width = 0.483841
+height = 6.1189
+depth = 28.9823
+
+[node name="CSGBox7" type="CSGBox" parent="Rooms/ComputerLab2/CSGCombiner"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.47501, 0, 11.2069 )
+width = 0.483841
+height = 6.1189
+depth = 28.9823
+
+[node name="CSGBox5" type="CSGBox" parent="Rooms/ComputerLab2/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.04362, 0, 13.2866 )
+width = 0.483841
+height = 6.1189
+depth = 57.9304
+
+[node name="CSGBox" type="CSGBox" parent="Rooms/ComputerLab2/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.70275, 0.358944, 5.80708 )
+operation = 2
+depth = 4.92183
+
+[node name="MeshInstance4" type="MeshInstance" parent="Rooms/ComputerLab2"]
+transform = Transform( -4.37114e-08, -1, -1.06581e-14, 1, -4.37114e-08, 0, -4.23516e-22, -1.06581e-14, 1, -6.01254, 2.72391, -0.664322 )
+mesh = SubResource( 11 )
+skeleton = NodePath("../../RecRoom")
+material/0 = SubResource( 12 )
+
+[node name="VerletRopeCs2" type="ImmediateGeometry" parent="Rooms/ComputerLab2/MeshInstance4"]
+transform = Transform( 1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, 7.55787e-05, 0.292536, 3.8147e-06 )
+material_override = SubResource( 14 )
+script = ExtResource( 17 )
+AttachEndTo = NodePath("../../../RecRoom/MeshInstance2/Position3D")
+RopeLength = 10.0
+RopeWidth = 0.01
+
+[node name="Position3D" type="Position3D" parent="Rooms/ComputerLab2/MeshInstance4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.294085, 0 )
+
+[node name="EpochalypseRoom" type="Spatial" parent="Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18.8503 )
+script = ExtResource( 31 )
+
+[node name="Label3D3" type="Spatial" parent="Rooms/EpochalypseRoom"]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 7.68392, -0.381169, 3.21297 )
+script = ExtResource( 15 )
+text = "Epochalypse Protocol Override
+Door will open on the
+date of the Epochalypse"
+text_size = 0.5
+font = SubResource( 9 )
+align = 1
+billboard = false
+color = Color( 0, 0, 0, 1 )
+metallic = 0.0
+roughness = 0.5
+emission_color = Color( 1, 1, 1, 1 )
+emission_strength = 0.0
+extrude = 0.0
+min_steps = 32
+max_steps = 256
+
+[node name="Area" type="Area" parent="Rooms/EpochalypseRoom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.18818, 0.616945, 1.34092 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rooms/EpochalypseRoom/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356039, -0.512697, 0.0391293 )
+shape = SubResource( 25 )
+
+[node name="BigDoor" parent="Rooms/EpochalypseRoom" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.77104, -0.781337, 1.2825 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="Rooms/EpochalypseRoom"]
+use_collision = true
+
+[node name="CSGBox5" type="CSGBox" parent="Rooms/EpochalypseRoom/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.24264, -2.45297, 5.35997 )
+use_collision = true
+width = 30.7779
+height = 1.34327
+depth = 20.3143
+material = SubResource( 15 )
+
+[node name="CSGBox" type="CSGBox" parent="Rooms/EpochalypseRoom/CSGCombiner"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 7.43916, 0, -1.14234 )
+width = 0.483841
+height = 6.1189
+depth = 10.9471
+
+[node name="CSGBox4" type="CSGBox" parent="Rooms/EpochalypseRoom/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.74663, -0.534137, 1.26558 )
+operation = 2
+width = 6.14686
+height = 2.46624
+depth = 1.92709
+material = SubResource( 18 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="Rooms/EpochalypseRoom"]
+transform = Transform( -4.35451e-08, -0.996195, 0.0871559, 1, -4.37114e-08, 0, 3.8097e-09, 0.0871559, 0.996195, 7.43611, 1.20989, 2.59896 )
+mesh = SubResource( 11 )
+skeleton = NodePath("../../RecRoom")
+material/0 = SubResource( 12 )
+
+[node name="Position3D" type="Position3D" parent="Rooms/EpochalypseRoom/MeshInstance5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.294085, 0 )
+
+[node name="CSGCombiner2" type="CSGCombiner" parent="Rooms/EpochalypseRoom"]
+
+[node name="CSGBox" type="CSGBox" parent="Rooms/EpochalypseRoom/CSGCombiner2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.76804, -0.371215, 1.33121 )
+height = 3.47303
+depth = 2.47811
+material = SubResource( 18 )
+
+[node name="CSGBox2" type="CSGBox" parent="Rooms/EpochalypseRoom/CSGCombiner2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.80761, 1.1744, 1.33121 )
+operation = 2
+width = 0.160514
+height = 0.162257
+depth = 2.36458
+material = SubResource( 18 )
+
+[node name="CSGBox3" type="CSGBox" parent="Rooms/EpochalypseRoom/CSGCombiner2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.74663, -0.534137, 1.26558 )
+operation = 2
+width = 6.14686
+height = 2.46624
+depth = 1.92709
+material = SubResource( 18 )
+
+[node name="Label3D" type="Spatial" parent="Rooms/EpochalypseRoom/CSGCombiner2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.72343, 1.19005, 1.28052 )
+script = ExtResource( 15 )
+text = "2022-04-30T23:59:59"
+text_size = 0.5
+font = SubResource( 17 )
+align = 0
+billboard = false
+color = Color( 1, 0, 0, 1 )
+metallic = 0.5
+roughness = 0.5
+emission_color = Color( 1, 0, 0, 1 )
+emission_strength = 1.0
+extrude = 0.05
+min_steps = 32
+max_steps = 256
+
+[node name="CSGCombiner3" type="CSGCombiner" parent="Rooms/EpochalypseRoom"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.09483, 0.135387, 1.3381 )
+
+[node name="CSGBox" type="CSGBox" parent="Rooms/EpochalypseRoom/CSGCombiner3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0355973, -0.691667, 0 )
+width = 0.306925
+height = 0.497384
+depth = 0.637028
+material = SubResource( 21 )
+
+[node name="Label3D" type="Spatial" parent="Rooms/EpochalypseRoom/CSGCombiner3"]
+transform = Transform( -0.00429347, 0, 0.999991, 0, 1, 0, -0.999991, 0, -0.00429347, 0.0577688, -0.646681, -0.0199585 )
+script = ExtResource( 15 )
+text = "Intel"
+text_size = 1.0
+font = SubResource( 22 )
+align = 0
+billboard = false
+color = Color( 0.0784314, 1, 0, 1 )
+metallic = 0.0
+roughness = 0.5
+emission_color = Color( 1, 1, 1, 1 )
+emission_strength = 0.0
+extrude = 0.1
+min_steps = 32
+max_steps = 256
+
+[node name="Label3D2" type="Spatial" parent="Rooms/EpochalypseRoom/CSGCombiner3"]
+transform = Transform( 0.0042935, 0, -0.999991, 0, 1, 0, 0.999991, 0, 0.0042935, -0.125976, -0.646681, -0.0191708 )
+script = ExtResource( 15 )
+text = "Intel"
+text_size = 1.0
+font = SubResource( 22 )
+align = 0
+billboard = false
+color = Color( 0.0784314, 1, 0, 1 )
+metallic = 0.0
+roughness = 0.5
+emission_color = Color( 1, 1, 1, 1 )
+emission_strength = 0.0
+extrude = 0.1
+min_steps = 32
+max_steps = 256
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Rooms/EpochalypseRoom"]
+autoplay = "RotateIntel"
+anims/RESET = SubResource( 23 )
+anims/RotateIntel = SubResource( 24 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Rooms/EpochalypseRoom"]
+stream = ExtResource( 20 )
+volume_db = -4.0
+
+[node name="Glitch" type="CanvasLayer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Glitch"]
+stream = ExtResource( 13 )
+
+[node name="ColorRect" type="ColorRect" parent="Glitch"]
+visible = false
+material = SubResource( 6 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="_" type="VBoxContainer" parent="Glitch/ColorRect"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -34.0
+margin_bottom = 34.0
+
+[node name="Label" type="Label" parent="Glitch/ColorRect/_"]
+show_behind_parent = true
+margin_right = 1024.0
+margin_bottom = 68.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "CONNECTION LOST"
+align = 1
+valign = 1
+
+[node name="Button2" type="Button" parent="Glitch/ColorRect/_"]
+margin_left = 489.0
+margin_top = 72.0
+margin_right = 534.0
+margin_bottom = 92.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "QUIT"
+flat = true
+
+[connection signal="MessageReceived" from="Auth" to="." method="_on_Auth_MessageReceived"]
+[connection signal="MessageReceived" from="Audit" to="." method="_on_Audit_MessageReceived"]
+[connection signal="date_changed" from="Clock" to="Rooms/EpochalypseRoom" method="_on_Clock_date_changed"]
+[connection signal="date_s_changed" from="Clock" to="Rooms/EpochalypseRoom" method="_on_Clock_date_s_changed"]
+[connection signal="timeout" from="Clock/Tick" to="Clock" method="_on_Tick_timeout"]
+[connection signal="Outputed" from="Clock/SSHClient" to="." method="_on_SSHClient_Outputed"]
+[connection signal="Outputed" from="SSHClient" to="." method="_on_SSHClient_Outputed"]
+[connection signal="Disconnected" from="MQTTClient" to="." method="_on_MQTTClient_Disconnected"]
+[connection signal="MessageReceived" from="MQTTClient" to="." method="_on_MQTTClient_MessageReceived"]
+[connection signal="MessageReceived" from="Rooms/Entry/MQTTClient" to="Rooms/Entry" method="_on_MQTTClient_MessageReceived"]
+[connection signal="Outputed" from="Rooms/Entry/SSHClient" to="Rooms/Entry" method="_on_SSHClient_Outputed"]
+[connection signal="body_entered" from="Rooms/EpochalypseRoom/Area" to="." method="_on_Area_body_entered"]
+[connection signal="pressed" from="Glitch/ColorRect/_/Button2" to="." method="_on_Button2_pressed"]
+
+[editable path="Rooms/ServerRoom/ComputerDesk2"]
+[editable path="Rooms/ServerRoom/Server"]

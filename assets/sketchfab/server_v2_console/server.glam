@@ -1,0 +1,37 @@
+; SPDX-FileCopyrightText: none
+;
+; SPDX-License-Identifier: CC0-1.0
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://addons/glam/assets/asset_author.gd" type="Script" id=1]
+[ext_resource path="res://addons/glam/assets/asset_license.gd" type="Script" id=2]
+[ext_resource path="res://addons/glam/assets/asset.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+name = "FlevasGR"
+year = 0
+contact = ""
+url = "https://sketchfab.com/FlevasGR"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+identifier = "CC-BY-4.0"
+
+[resource]
+script = ExtResource( 3 )
+type = 0
+description = "The rack includes a UPS, NAS, 2 2u servers, 6 1u servers and a console."
+Tags = "server, rack"
+source_id = "sketchfab"
+id = "server-v2-console-f24594ece9634cec9c1210c041838371"
+title = "Server V2 +console"
+official_title = true
+source_url = "https://sketchfab.com/3d-models/server-v2-console-f24594ece9634cec9c1210c041838371"
+authors = [ SubResource( 1 ) ]
+licenses = [ SubResource( 2 ) ]
+derived_from = [  ]
+files = [  ]
+preview_image_url_lq = ""
+preview_image_url_hq = ""
+notes = "Texture modified to obscure visible brand logo."

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Hi-tech Doors - Red
+* source:	https://sketchfab.com/3d-models/hi-tech-doors-red-7c10e4fec64645119f158f53738ea62c
+* author:	invisiprim (https://sketchfab.com/invisiprim)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Hi-tech Doors - Red" (https://sketchfab.com/3d-models/hi-tech-doors-red-7c10e4fec64645119f158f53738ea62c) by invisiprim (https://sketchfab.com/invisiprim) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

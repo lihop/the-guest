@@ -1,0 +1,39 @@
+; SPDX-FileCopyrightText: none
+;
+; SPDX-License-Identifier: CC0-1.0
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://addons/glam/assets/asset.gd" type="Script" id=1]
+[ext_resource path="res://addons/glam/assets/asset_license.gd" type="Script" id=2]
+[ext_resource path="res://addons/glam/assets/asset_author.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+name = "Beinaja"
+year = 0
+contact = ""
+url = "https://sketchfab.com/beinaja"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+identifier = "CC-BY-4.0"
+
+[resource]
+script = ExtResource( 1 )
+type = 0
+description = "We can play games on only small phones, but first we need to go to an Internet cafe to play a game with some money. This machine called arcade stores so many memories of the past, you can turn this green screen into anything.
+
+Have fun and don’t overdo it."
+Tags = "arcade, electronic, arcademachine, machine, 90s, arcade-retro, isometric-style, greenscreen, game, blender, lowpoly, blender3d, poly, polygon, gamemachine, "
+source_id = "sketchfab"
+id = "the-90s-game-machine-9f2b2ec0442f4d2db210d6c76a1366ff"
+title = "The '90s Game Machine"
+official_title = true
+source_url = "https://sketchfab.com/3d-models/the-90s-game-machine-9f2b2ec0442f4d2db210d6c76a1366ff"
+authors = [ SubResource( 1 ) ]
+licenses = [ SubResource( 2 ) ]
+derived_from = [  ]
+files = [  ]
+preview_image_url_lq = ""
+preview_image_url_hq = ""
+notes = ""

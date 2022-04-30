@@ -1,0 +1,39 @@
+; SPDX-FileCopyrightText: none
+;
+; SPDX-License-Identifier: CC0-1.0
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://addons/glam/assets/asset.gd" type="Script" id=1]
+[ext_resource path="res://addons/glam/assets/asset_license.gd" type="Script" id=2]
+[ext_resource path="res://addons/glam/assets/asset_author.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+name = "dudecon"
+year = 0
+contact = ""
+url = "https://sketchfab.com/dudecon"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+identifier = "CC-BY-4.0"
+
+[resource]
+script = ExtResource( 1 )
+type = 0
+description = "From a set of three low-poly potted plants I made for a VR app.
+
+Like this model, but need something a bit different? I take commissions! http://peripheralarbor.com/commission/"
+Tags = "plant, pot, leaf, nature, game-asset, nature-plants, lowpoly, spade-leaf"
+source_id = "sketchfab"
+id = "potted-plant-mediterranean-med-leaf-low-poly-bc7f26baef2a45d18dbd9a5d6d2ec565"
+title = "Potted Plant, Mediterranean med leaf, low poly"
+official_title = true
+source_url = "https://sketchfab.com/3d-models/potted-plant-mediterranean-med-leaf-low-poly-bc7f26baef2a45d18dbd9a5d6d2ec565"
+authors = [ SubResource( 1 ) ]
+licenses = [ SubResource( 2 ) ]
+derived_from = [  ]
+files = [  ]
+preview_image_url_lq = ""
+preview_image_url_hq = ""
+notes = ""

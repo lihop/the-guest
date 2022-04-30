@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/glam/controls/filters_panel/filters/multi_choice/multi_choice_filter.gd" type="Script" id=1]
+[ext_resource path="res://addons/glam/controls/filters_panel/filters/multi_choice/h_flow_container.gd" type="Script" id=2]
+[ext_resource path="res://addons/glam/controls/filters_panel/filters/filter.tscn" type="PackedScene" id=3]
+
+[node name="MultiChoiceFilter" instance=ExtResource( 3 )]
+script = ExtResource( 1 )
+
+[node name="Options" type="Container" parent="." index="1"]
+margin_top = 18.0
+margin_right = 1024.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+script = ExtResource( 2 )
+horizontal_margin = 0.0
+vertical_margin = 0.0

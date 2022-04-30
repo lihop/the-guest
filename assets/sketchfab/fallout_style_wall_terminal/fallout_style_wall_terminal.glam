@@ -1,0 +1,37 @@
+; SPDX-FileCopyrightText: none
+;
+; SPDX-License-Identifier: CC0-1.0
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://addons/glam/assets/asset.gd" type="Script" id=1]
+[ext_resource path="res://addons/glam/assets/asset_license.gd" type="Script" id=2]
+[ext_resource path="res://addons/glam/assets/asset_author.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+name = "Rashaun Sanders"
+year = 0
+contact = ""
+url = "https://sketchfab.com/RashaunSanders"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+identifier = "CC-BY-4.0"
+
+[resource]
+script = ExtResource( 1 )
+type = 0
+description = "This is my fallout inspired wall terminal made for my Intro to 3D Modeling course during the Spring of 2021."
+Tags = "computer, fan, wasteland, terminal, substancepainter, 3dsmax, fallout, "
+source_id = "sketchfab"
+id = "fallout-style-wall-terminal-4a9bb6bc04d74a8e9948ba01eda65bbd"
+title = "Fallout Style Wall Terminal"
+official_title = true
+source_url = "https://sketchfab.com/3d-models/fallout-style-wall-terminal-4a9bb6bc04d74a8e9948ba01eda65bbd"
+authors = [ SubResource( 1 ) ]
+licenses = [ SubResource( 2 ) ]
+derived_from = [  ]
+files = [  ]
+preview_image_url_lq = ""
+preview_image_url_hq = ""
+notes = ""

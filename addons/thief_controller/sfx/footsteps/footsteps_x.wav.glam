@@ -1,0 +1,41 @@
+; SPDX-FileCopyrightText: none
+;
+; SPDX-License-Identifier: CC0-1.0
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://addons/glam/assets/asset_author.gd" type="Script" id=1]
+[ext_resource path="res://addons/glam/assets/asset_license.gd" type="Script" id=2]
+[ext_resource path="res://addons/glam/assets/audio_stream_asset.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+name = "Fission9"
+year = 2020
+contact = ""
+url = "https://freesound.org/people/Fission9/"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+identifier = "CC0-1.0"
+
+[resource]
+script = ExtResource( 3 )
+type = 3
+description = "Six footsteps on stone with hiking boots. Each step is separated by about 250 ms of silence.
+Recorded with a H4n Pro on 06/06/2020
+Edited with Audacity."
+Tags = "footsteps, step, concrete, walk, surface, footstep, field-recording, run, stone, "
+source_id = "freesound"
+id = "521590"
+title = "Hiking Boot Footsteps on Stone"
+official_title = true
+source_url = "https://freesound.org/people/Fission9/sounds/521590/"
+authors = [ SubResource( 1 ) ]
+licenses = [ SubResource( 2 ) ]
+derived_from = [  ]
+files = [ "res://addons/thief_controller/sfx/footsteps/footstep_1.wav", "res://addons/thief_controller/sfx/footsteps/footstep_2.wav", "res://addons/thief_controller/sfx/footsteps/footstep_3.wav", "res://addons/thief_controller/sfx/footsteps/footstep_4.wav", "res://addons/thief_controller/sfx/footsteps/footstep_5.wav", "res://addons/thief_controller/sfx/footsteps/footstep_6.wav" ]
+preview_image_url_lq = ""
+preview_image_url_hq = ""
+notes = ""
+duration = 0.0
+preview_audio_url = ""

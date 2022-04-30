@@ -1,0 +1,11 @@
+Model Information:
+* title:	Coffee Table Blue
+* source:	https://sketchfab.com/3d-models/coffee-table-blue-ad976e052d1c472aa07d449fa8ed0d67
+* author:	Kirkieb (https://sketchfab.com/kirkieo)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Coffee Table Blue" (https://sketchfab.com/3d-models/coffee-table-blue-ad976e052d1c472aa07d449fa8ed0d67) by Kirkieb (https://sketchfab.com/kirkieo) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

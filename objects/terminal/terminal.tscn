@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://objects/wall_terminal/theme.tres" type="Theme" id=1]
+[ext_resource path="res://addons/godot_xterm/terminal.gd" type="Script" id=2]
+[ext_resource path="res://objects/terminal/terminal.gd" type="Script" id=3]
+
+[sub_resource type="ViewportTexture" id=5]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="QuadMesh" id=2]
+resource_local_to_scene = true
+
+[sub_resource type="ViewportTexture" id=3]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="SpatialMaterial" id=4]
+resource_local_to_scene = true
+albedo_texture = SubResource( 3 )
+
+[node name="Terminal" type="StaticBody"]
+script = ExtResource( 3 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 1920, 1080 )
+render_target_v_flip = true
+render_target_clear_mode = 1
+
+[node name="Terminal" type="Control" parent="Viewport" groups=["terminal"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 2
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+visible = false
+pixel_size = 0.001
+texture = SubResource( 5 )
+
+[node name="Screen" type="MeshInstance" parent="."]
+transform = Transform( 0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0, 0 )
+mesh = SubResource( 2 )
+skeleton = NodePath("../Sprite3D")
+material/0 = SubResource( 4 )
+
+[node name="Camera" type="Camera" parent="."]
+
+[node name="CamTween" type="Tween" parent="."]

@@ -1,0 +1,41 @@
+; SPDX-FileCopyrightText: none
+;
+; SPDX-License-Identifier: CC0-1.0
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://addons/glam/assets/asset.gd" type="Script" id=1]
+[ext_resource path="res://addons/glam/assets/asset_author.gd" type="Script" id=2]
+[ext_resource path="res://addons/glam/assets/asset_license.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+name = "Michael Carey"
+year = 0
+contact = ""
+url = "mcarey134.wix.com/michaelcarey"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 3 )
+identifier = "CC-BY-3.0"
+
+[sub_resource type="ImageTexture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+type = 0
+description = "Old school looking terminal computer
+"
+Tags = "pc, terminal, computer, "
+source_id = "open_game_art"
+id = "old-terminal"
+title = "Old Terminal"
+official_title = true
+source_url = "https://opengameart.org/content/old-terminal"
+authors = [ SubResource( 1 ) ]
+licenses = [ SubResource( 2 ) ]
+derived_from = [  ]
+files = [ "res://assets/open_game_art/Old_Terminal/terminal.glb", "res://assets/open_game_art/Old_Terminal/termskin.png" ]
+preview_image_url_lq = ""
+preview_image_url_hq = ""
+preview_image_lq = SubResource( 3 )
+notes = ""

@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: CC0-1.0
+.import/
+.mono/
+.plugged/
+.venv/
+export/
+logs/
+mono_crash.*
+.gut_editor_config.json
+*.swp

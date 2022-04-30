@@ -1,0 +1,70 @@
+; SPDX-FileCopyrightText: none
+;
+; SPDX-License-Identifier: CC0-1.0
+[gd_resource type="Resource" load_steps=9 format=2]
+
+[ext_resource path="res://addons/glam/assets/asset_license.gd" type="Script" id=1]
+[ext_resource path="res://addons/glam/assets/asset_author.gd" type="Script" id=2]
+[ext_resource path="res://addons/glam/assets/stream_texture_asset.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+name = "Leroy Hopson"
+year = 2022
+contact = "<copyright@leroy.geek.nz>"
+url = "https://github.com/ihop"
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 2 )
+name = "DonkeyHotey"
+year = 0
+contact = ""
+url = "https://www.flickr.com/photos/donkeyhotey/"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 1 )
+identifier = "CC-BY-2.0"
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 3 )
+type = 0
+description = "This series is based on a World War II Poster, \"Together We Can Do It!\", created by the Office for Office for Emergency Management and the War Production Board.
+
+ 
+
+The source for this series is an image in the public domain from The U.S. National Archives flickr photostream."
+Tags = "labor, labor poster, unions, poster, donkeyhotey, together we can do it!, photoshop, union, labor unions, union poster, photo manipulation, photo, manipulation, commentary, political commentary, art, political art, "
+source_id = "flickr"
+id = "5527251114"
+title = "Together We Can Do It"
+official_title = true
+source_url = "https://www.flickr.com/photos/47422005@N04/5527251114"
+authors = [ SubResource( 3 ) ]
+licenses = [ SubResource( 2 ) ]
+derived_from = [  ]
+files = [ "res://assets/flickr/together_we_can_do_it/together_we_can_do_it.jpg" ]
+preview_image_url_lq = ""
+preview_image_url_hq = ""
+notes = ""
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 1 )
+identifier = "CC-BY-4.0"
+
+[resource]
+script = ExtResource( 3 )
+type = 0
+description = ""
+Tags = ""
+source_id = ""
+id = ""
+title = "Together We Type"
+official_title = true
+source_url = ""
+authors = [ SubResource( 1 ) ]
+licenses = [ SubResource( 5 ) ]
+derived_from = [ SubResource( 4 ) ]
+files = [ "res://assets/flickr/together_we_can_do_it/poster.jpg" ]
+preview_image_url_lq = ""
+preview_image_url_hq = ""
+notes = ""

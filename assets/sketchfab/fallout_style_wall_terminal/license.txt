@@ -1,0 +1,11 @@
+Model Information:
+* title:	Fallout Style Wall Terminal
+* source:	https://sketchfab.com/3d-models/fallout-style-wall-terminal-4a9bb6bc04d74a8e9948ba01eda65bbd
+* author:	Rashaun Sanders (https://sketchfab.com/RashaunSanders)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Fallout Style Wall Terminal" (https://sketchfab.com/3d-models/fallout-style-wall-terminal-4a9bb6bc04d74a8e9948ba01eda65bbd) by Rashaun Sanders (https://sketchfab.com/RashaunSanders) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

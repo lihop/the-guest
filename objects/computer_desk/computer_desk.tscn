@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://objects/computer_desk/wood.tres" type="Material" id=1]
+[ext_resource path="res://assets/open_game_art/Old_Terminal/old_terminal.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+material = ExtResource( 1 )
+size = Vector3( 0.1, 1, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -0.05, -0.45928, -0.45928, 0.059375, 0.505208, 0.505208, 0.059375, 0.505208, -0.505208, 0.059375, -0.505208, 0.505208, -0.05, 0.45928, 0.45928, 0.059375, -0.505208, -0.505208, -0.05, -0.45928, 0.45928, -0.05, 0.45928, -0.45928 )
+
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( -0.05, -0.45928, -0.45928, 0.059375, 0.505208, 0.505208, 0.059375, 0.505208, -0.505208, 0.059375, -0.505208, 0.505208, -0.05, 0.45928, 0.45928, 0.059375, -0.505208, -0.505208, -0.05, -0.45928, 0.45928, -0.05, 0.45928, -0.45928 )
+
+[sub_resource type="CubeMesh" id=2]
+material = ExtResource( 1 )
+size = Vector3( 0.1, 1.1, 2.2 )
+
+[sub_resource type="ConvexPolygonShape" id=5]
+points = PoolVector3Array( 0.0645818, 0.557639, 1.10764, -0.0417098, -0.55, -1.09247, 0.0645699, -0.557639, -1.10764, -0.0576269, 0.557639, -1.10764, -0.0417098, -0.55, 1.09247, 0.0645818, 0.557639, -1.10764, -0.0576269, 0.557639, 1.10764, 0.0645699, -0.557639, 1.10764, -0.0576389, 0.297815, 1.10764, -0.0576389, 0.313099, -1.10764, 0.0645818, -0.221505, 1.10764 )
+
+[node name="ComputerDesk" type="StaticBody"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 1 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+shape = SubResource( 4 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( 1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, 0.00234777, 0.52615, 0.0164078 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, 0.00234777, 0.52615, 0.0164078 )
+shape = SubResource( 5 )
+
+[node name="OldTerminal" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1.09278e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.09278e-08, 0, 0.616196, -0.153714 )

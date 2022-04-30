@@ -1,0 +1,14 @@
+services:
+  javascript:
+    build: ../../../misc/docker
+    user: ${UID_GID}
+    volumes:
+      - .:/src
+    command:
+      - /bin/bash
+      - -c
+      - |
+        cd /src/thirdparty/godot-cpp
+        scons platform=javascript target=$${TARGET:-debug} -j$$(nproc)
+        cd /src
+        scons platform=javascript target=$${TARGET:-debug} -j$$(nproc)

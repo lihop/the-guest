@@ -1,0 +1,44 @@
+; SPDX-FileCopyrightText: none
+;
+; SPDX-License-Identifier: CC0-1.0
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://addons/glam/assets/asset.gd" type="Script" id=1]
+[ext_resource path="res://addons/glam/assets/asset_author.gd" type="Script" id=2]
+[ext_resource path="res://addons/glam/assets/asset_license.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+name = "Primož Peterlin"
+year = 0
+contact = ""
+url = ""
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+name = "Steve White"
+year = 0
+contact = ""
+url = ""
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 3 )
+identifier = "GPL-3.0-or-later"
+
+[resource]
+script = ExtResource( 1 )
+type = 0
+description = ""
+Tags = ""
+source_id = ""
+id = ""
+title = "FreeSans"
+official_title = true
+source_url = "https://www.gnu.org/software/freefont/"
+authors = [ SubResource( 1 ), SubResource( 2 ) ]
+licenses = [ SubResource( 3 ) ]
+derived_from = [  ]
+files = [  ]
+preview_image_url_lq = ""
+preview_image_url_hq = ""
+notes = ""

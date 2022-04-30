@@ -1,0 +1,10 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Trials of CLI
+Upstream-Contact: Leroy Hopson <trials-of-cli@leroy.geek.nz>
+Source: https://github.com/lihop/trials-of-cli
+
+# Sample paragraph, commented out:
+#
+# Files: src/*
+# Copyright: $YEAR $NAME <$CONTACT>
+# License: ...

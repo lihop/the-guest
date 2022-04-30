@@ -1,0 +1,39 @@
+; SPDX-FileCopyrightText: none
+;
+; SPDX-License-Identifier: CC0-1.0
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://addons/glam/assets/audio_stream_asset.gd" type="Script" id=1]
+[ext_resource path="res://addons/glam/assets/asset_author.gd" type="Script" id=2]
+[ext_resource path="res://addons/glam/assets/asset_license.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+name = "juskiddink"
+year = 0
+contact = ""
+url = "https://freesound.org/people/juskiddink/"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 3 )
+identifier = "CC-BY-4.0"
+
+[resource]
+script = ExtResource( 1 )
+type = 0
+description = "Dropping a length of old telegraph-pole horizontally onto a grass lawn.NT4-BMA2-R09HR."
+Tags = "drop, dry, dump, heavy, impact, object, thud, thump, wood, wooden, "
+source_id = "freesound"
+id = "108617"
+title = "Thud-dry.wav"
+official_title = true
+source_url = "https://freesound.org/people/juskiddink/sounds/108617/"
+authors = [ SubResource( 1 ) ]
+licenses = [ SubResource( 2 ) ]
+derived_from = [  ]
+files = [ "res://addons/thief_controller/sfx/landing/land_1.wav" ]
+preview_image_url_lq = ""
+preview_image_url_hq = ""
+notes = ""
+duration = 0.0
+preview_audio_url = ""

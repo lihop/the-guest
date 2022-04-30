@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Computer_Glitching_Digital_Data_Corruption_02-04_LOOP_wav_573189_0K-WAV.wav-bcfe6b714a1d29c1147fa1a03c843c03.sample"
+
+[deps]
+
+source_file="res://assets/freesound/Computer_Glitching_Digital_Data_Corruption_02-04_LOOP_wav_573189/Computer_Glitching_Digital_Data_Corruption_02-04_LOOP_wav_573189_0K-WAV.wav"
+dest_files=[ "res://.import/Computer_Glitching_Digital_Data_Corruption_02-04_LOOP_wav_573189_0K-WAV.wav-bcfe6b714a1d29c1147fa1a03c843c03.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

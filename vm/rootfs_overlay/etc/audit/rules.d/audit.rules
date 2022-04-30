@@ -1,0 +1,6 @@
+-a exit,always -F arch=b32 -S adjtimex -S settimeofday -S clock_settime -k timechange
+-a exit,always -F arch=b64 -S adjtimex -S settimeofday -S clock_settime -k timechange
+-a exit,always -F arch=b64 -S execve -F path=/sbin/reboot
+-a exit,always -F arch=b64 -S execve -F path=/sbin/init
+-a exit,always -F arch=b64 -S execve -F path=/sbin/poweroff
+-a exit,always -F arch=b64 -S execve -F path=/sbin/shutdown

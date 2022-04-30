@@ -1,0 +1,39 @@
+; SPDX-FileCopyrightText: none
+;
+; SPDX-License-Identifier: CC0-1.0
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://addons/glam/assets/asset.gd" type="Script" id=1]
+[ext_resource path="res://addons/glam/assets/asset_license.gd" type="Script" id=2]
+[ext_resource path="res://addons/glam/assets/asset_author.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+name = "ribot02"
+year = 0
+contact = ""
+url = "https://sketchfab.com/ribot02"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+identifier = "CC-BY-4.0"
+
+[resource]
+script = ExtResource( 1 )
+type = 0
+description = "some retro low poly cyberpunk computer screens… can be used as tv too ^^
+
+please credit me if oyu use this :)"
+Tags = "computer, tv, retro, monitor, retrotv, screen, computerscreen, cyberpunkt, "
+source_id = "sketchfab"
+id = "retro-cyberpunk-computer-screens-6fbdcecb1b1e4f41947b4c03b5eed8f9"
+title = "retro cyberpunk computer screens"
+official_title = true
+source_url = "https://sketchfab.com/3d-models/retro-cyberpunk-computer-screens-6fbdcecb1b1e4f41947b4c03b5eed8f9"
+authors = [ SubResource( 1 ) ]
+licenses = [ SubResource( 2 ) ]
+derived_from = [  ]
+files = [  ]
+preview_image_url_lq = ""
+preview_image_url_hq = ""
+notes = ""

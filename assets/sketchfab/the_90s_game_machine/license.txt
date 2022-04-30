@@ -1,0 +1,11 @@
+Model Information:
+* title:	The '90s Game Machine
+* source:	https://sketchfab.com/3d-models/the-90s-game-machine-9f2b2ec0442f4d2db210d6c76a1366ff
+* author:	Beinaja (https://sketchfab.com/beinaja)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "The '90s Game Machine" (https://sketchfab.com/3d-models/the-90s-game-machine-9f2b2ec0442f4d2db210d6c76a1366ff) by Beinaja (https://sketchfab.com/beinaja) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

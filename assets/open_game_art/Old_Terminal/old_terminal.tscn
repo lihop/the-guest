@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/open_game_art/Old_Terminal/terminal.glb" type="PackedScene" id=1]
+
+[node name="OldTerminal" type="Spatial"]
+
+[node name="Model" parent="." instance=ExtResource( 1 )]

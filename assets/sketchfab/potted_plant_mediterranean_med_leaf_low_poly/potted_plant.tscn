@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/sketchfab/potted_plant_mediterranean_med_leaf_low_poly/scene.gltf" type="PackedScene" id=1]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 0.210809
+height = 0.571037
+
+[node name="PottedPlant" type="StaticBody"]
+
+[node name="Model" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.283918, 0 )
+shape = SubResource( 1 )
