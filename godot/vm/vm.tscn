@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://vm/vm.gd" type="Script" id=1]
+[ext_resource path="res://vm/vm_config.tres" type="Resource" id=2]
+
+[node name="VM" type="Node" groups=["vm"]]
+script = ExtResource( 1 )
+config = ExtResource( 2 )
+use_threads = true

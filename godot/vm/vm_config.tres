@@ -1,0 +1,26 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://addons/gdtemu/device/net_device.gd" type="Script" id=1]
+[ext_resource path="res://addons/gdtemu/virtual_machine_config.gd" type="Script" id=2]
+[ext_resource path="res://addons/gdtemu/device/block_device.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 3 )
+file = "res://vm/images/rootfs.ext2"
+mode = 2
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+driver = 0
+port_forwards = PoolStringArray( "" )
+
+[resource]
+script = ExtResource( 2 )
+machine_class = 3
+memory_size = 256
+bios = "res://addons/gdtemu/native/bin/bbl64.bin"
+kernel = "res://vm/images/Image"
+cmdline = "loglevel=7 console=hvc0 root=/dev/vda rw"
+rng_device = true
+block_devices = [ SubResource( 2 ) ]
+net_devices = [ SubResource( 1 ) ]
